@@ -62,7 +62,7 @@ function calculateSumOfPart($part)
 
 function validateInputs($first, $end)
 {
-    $notEmpty = (!empty($first) || !empty($end));                       // Check if first and end is not empty
+    $notEmpty = (!empty($first) && !empty($end));                       // Check if first and end is not empty
     $correctOrder = (intval($first) < intval($end));                    // Check if end is greater that first
     $correctDigitCount = (strlen($first) <= 6 && strlen($end) == 6);    // Check if both has right 6 digits
     return $notEmpty && $correctOrder && $correctDigitCount;             //Validate by above conditions
